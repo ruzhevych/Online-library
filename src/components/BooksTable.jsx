@@ -1,7 +1,5 @@
 import React from 'react';
 import { Space, Table, Tag } from 'antd';
-import { DeleteFilled, EditFilled, InfoCircleFilled, SearchOutlined } from '@ant-design/icons';
-
 const columns = [
   {
     title: 'Image',
@@ -48,17 +46,10 @@ const columns = [
   {
     title: 'Action',
     key: 'action',
-    render: (_, record) => (
+    render: (_) => (
       <Space size="middle">
-        <Popconfirm
-          title="Delete the product"
-          description={`Are you sure to delete ${record.title}?`}
-          onConfirm={() => deleteItem(record.id)}
-          okText="Yes"
-          cancelText="No"
-        >
-          <Button color="danger" variant="outlined" icon={<DeleteFilled />} />
-        </Popconfirm>
+        <a>Change</a>
+        <a>Delete</a>
       </Space>
     ),
   },
